@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 
 app.use(cors({ origin: 'http://localhost:5173' }))
+app.use(express.static('dist'))
 app.use(express.json())
 
 const requestLogger = (request, response, next) => {
